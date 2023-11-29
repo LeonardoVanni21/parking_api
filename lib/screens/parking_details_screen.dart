@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:parking_api/models/post_model.dart';
 import 'package:parking_api/screens/post_update_model_screen.dart';
 import '../components/parking_spot.dart';
 import 'package:intl/intl.dart';
 import '../models/parking_model.dart';
-import 'package:flutter/cupertino.dart';
 import '../controllers/parking_spots_contoller.dart';
 
 class ParkingDetails extends StatefulWidget {

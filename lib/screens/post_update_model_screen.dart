@@ -1,7 +1,6 @@
 import 'package:parking_api/models/post_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../controllers/parking_spots_contoller.dart';
 

@@ -22,9 +22,9 @@ class ParkingSpotService {
   }
 
   Future<dynamic> delete(String id) async {
-    http.Response _response;
+    http.Response response;
 
-    _response = await http.delete(
+    response = await http.delete(
         Uri.parse(
             "https://parking-spot-238adfbb7467.herokuapp.com/parking-spot/$id"),
         headers: {
@@ -32,7 +32,7 @@ class ParkingSpotService {
           "content-type": "application/json"
         });
 
-    if (_response.statusCode == 200 || _response.statusCode == 201) {
+    if (response.statusCode == 200 || response.statusCode == 201) {
       return true;
     } else {
       return false;
@@ -40,10 +40,10 @@ class ParkingSpotService {
   }
 
   Future<dynamic> saveOrUpdate(PostModel objeto) async {
-    http.Response _response;
+    http.Response response;
 
     if (objeto.id != null) {
-      _response = await http.post(
+      response = await http.post(
           Uri.parse(
               "https://parking-spot-238adfbb7467.herokuapp.com/parking-spot/edit"),
           body: json.encode(objeto.toJson()),
@@ -52,7 +52,7 @@ class ParkingSpotService {
             "content-type": "application/json"
           });
     } else {
-      _response = await http.post(
+      response = await http.post(
           Uri.parse(
               "https://parking-spot-238adfbb7467.herokuapp.com/parking-spot/save"),
           body: json.encode(objeto.toJson()),
@@ -62,8 +62,8 @@ class ParkingSpotService {
           });
     }
 
-    if (_response.statusCode == 200 || _response.statusCode == 201) {
-      Map<String, dynamic> retorno = json.decode(_response.body);
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      Map<String, dynamic> retorno = json.decode(response.body);
       return PostModel.fromJson(retorno);
     } else {
       return false;
