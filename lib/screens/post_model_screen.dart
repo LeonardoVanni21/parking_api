@@ -45,6 +45,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _parkingSpotController,
                         decoration: const InputDecoration(
                           hintText: 'Parking Spot',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -59,6 +63,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _licensePlateController,
                         decoration: const InputDecoration(
                           hintText: 'License Plate',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -73,6 +81,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _brandCarController,
                         decoration: const InputDecoration(
                           hintText: 'Brand Car',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -87,6 +99,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _modelCarController,
                         decoration: const InputDecoration(
                           hintText: 'Model Car',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -101,6 +117,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _colorCarController,
                         decoration: const InputDecoration(
                           hintText: 'Color Car',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -115,6 +135,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _responsibleNameController,
                         decoration: const InputDecoration(
                           hintText: 'Responsible Name',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -129,6 +153,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _apartmentController,
                         decoration: const InputDecoration(
                           hintText: 'Apartment',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -143,6 +171,10 @@ class _PostModelScreenState extends State<PostModelScreen> {
                         controller: _blockController,
                         decoration: const InputDecoration(
                           hintText: 'Block',
+                          border: OutlineInputBorder(), // Add a border around the text field
+                          filled: true,
+                          contentPadding: EdgeInsets.all(15),
+                          hintStyle: TextStyle(color: Colors.grey), 
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {

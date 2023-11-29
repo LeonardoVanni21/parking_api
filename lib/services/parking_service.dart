@@ -21,6 +21,24 @@ class ParkingSpotService {
     }
   }
 
+  Future<dynamic> delete(String id) async {
+    http.Response _response;
+
+    _response = await http.delete(
+        Uri.parse(
+            "https://parking-spot-238adfbb7467.herokuapp.com/parking-spot/$id"),
+        headers: {
+          "Accept": "application/json",
+          "content-type": "application/json"
+        });
+
+    if (_response.statusCode == 200 || _response.statusCode == 201) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   Future<dynamic> saveOrUpdate(PostModel objeto) async {
     http.Response _response;
 

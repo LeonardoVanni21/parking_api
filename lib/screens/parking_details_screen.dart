@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:parking_api/models/post_model.dart';
 import 'package:parking_api/screens/post_update_model_screen.dart';
 import '../components/parking_spot.dart';
 import 'package:intl/intl.dart';
 import '../models/parking_model.dart';
 import 'package:flutter/cupertino.dart';
+import '../controllers/parking_spots_contoller.dart';
 
 class ParkingDetails extends StatefulWidget {
   late final ParkingSpot spot;
@@ -15,6 +18,9 @@ class ParkingDetails extends StatefulWidget {
 }
 
 class _ParkingDetailsState extends State<ParkingDetails> {
+
+  var controller = ParkingSpotsController();
+
   @override
   Widget build(BuildContext context) {
     final DateFormat formatter = DateFormat('dd/MM/yyyy');
@@ -24,7 +30,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
           title: Text("Details"),
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(right: 50.0),
+              padding: const EdgeInsets.only(right: 20.0),
               child: IconButton(
                 icon: Icon(Icons.edit),
                 splashRadius: 24.0,
@@ -44,6 +50,17 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                       widget.spot.block,
                     ))),
                   );
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 50.0),
+              child: IconButton(
+                icon: Icon(Icons.delete),
+                splashRadius: 24.0,
+                onPressed: () {
+                  controller.delete(widget.spot.id.toString());
+                  Get.back();
                 },
               ),
             ),
@@ -72,6 +89,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,6 +99,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,6 +109,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,6 +119,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,6 +129,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -117,6 +139,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,6 +149,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -135,6 +159,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,6 +169,7 @@ class _ParkingDetailsState extends State<ParkingDetails> {
                           ],
                         ),
                       ),
+                      Divider(color: Colors.grey),
                       ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

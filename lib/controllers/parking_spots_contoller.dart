@@ -33,5 +33,13 @@ class ParkingSpotsController extends GetxController {
     return list;
   }
 
+  Future<dynamic> delete(String id)  async {
+    isLoading.value = true;
+    var list = await parkingService.delete(id);
+    isLoading.value = false;
+    update();
+    return list;
+  }
+
 
 }
