@@ -1,16 +1,24 @@
-# parking_api
+# Parking API
 
-A new Flutter project.
+This is a Flutter project that provides an API for managing parking spots.
+
+## Features
+
+- List all parking spots
+- Add a new parking spot
+- Update an existing parking spot
+- Delete a parking spot
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this project, clone the repository and run `flutter run` in the project directory.
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK
+- Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Resources
+
+- [Flutter documentation](https://docs.flutter.dev/)
+- [Dart documentation](https://dart.dev/guides)
